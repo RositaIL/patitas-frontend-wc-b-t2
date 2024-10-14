@@ -1,16 +1,17 @@
 package pe.edu.cibertec.patitas_frontend_wc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
+import pe.edu.cibertec.patitas_frontend_wc.client.AutenticationClient;
 import pe.edu.cibertec.patitas_frontend_wc.dto.LoginRequestDTO;
 import pe.edu.cibertec.patitas_frontend_wc.dto.LoginResponseDTO;
+import pe.edu.cibertec.patitas_frontend_wc.dto.LogoutRequestDTO;
+import pe.edu.cibertec.patitas_frontend_wc.dto.LogoutResponseDTO;
 import pe.edu.cibertec.patitas_frontend_wc.viewmodel.LoginModel;
 import reactor.core.publisher.Mono;
 
